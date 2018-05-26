@@ -3,7 +3,7 @@
     ViewBag.Title = "Login";
 }
 
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,7 @@
 <body>
     @using (Html.BeginForm("Login", "Home"))
     {
+        <h2>로그인</h2>
         <table border="1">
     <tr>
         <td>
@@ -31,7 +32,8 @@
     </tr>
     <tr>
         <td colspan="2" align="center">
-            <input type="submit" value="Login">
+            <input type="reset" value="취소" />
+            <input type="submit" value="로그인">
         </td>
 
     </tr>

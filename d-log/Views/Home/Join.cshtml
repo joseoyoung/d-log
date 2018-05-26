@@ -1,15 +1,24 @@
 ﻿@model d_log.Models.Cuser
 
 
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    @{<script type="text/javascript">
+        function id_check() {
+            var id = document.getElementById('theID');//theID값을 받아와야 함.
+            alert(id);
+        }
+    </script>}
+    <style>
+    </style>
 </head>
 <body>
     @using (Html.BeginForm("Join", "Home"))
     {
+        <h2>회원가입</h2>
         <table border="1">
             <tr>
                 <td>
@@ -17,6 +26,7 @@
                 </td>
                 <td>
                     @Html.TextBoxFor(x => x.theID, new { style = "width:150px;" })
+                    <input type="button" value="중복 검사" onclick="id_check()" />
 
                 </td>
             </tr>
@@ -34,8 +44,8 @@
                     PW재확인
                 </td>
                 <td>
-                    @Html.TextBoxFor(x => x.thePW, new { style = "width:150px;", @type = "password" })
-
+                    @Html.TextBoxFor(x => x.thePW2, new { style = "width:150px;", @type = "password" })
+                    
                 </td>
             </tr>
             <tr>
@@ -57,7 +67,8 @@
                 </td>
             </tr>
         </table>
-        <input type="submit" value="Login">
+        <input type="reset" value="취소" />
+        <input type="submit" value="회원가입">
 
 
     }

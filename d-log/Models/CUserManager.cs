@@ -18,6 +18,7 @@ namespace d_log.Models
             tmpUSer.theUniqueID = 0;
             tmpUSer.theID = aUser.theID;
             tmpUSer.thePW = aUser.thePW;
+            tmpUSer.thePW2 = aUser.thePW2;
             tmpUSer.theName = aUser.theName;
             tmpUSer.theEmail= aUser.theEmail;
             
