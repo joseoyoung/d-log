@@ -13,20 +13,83 @@
         }
     </script>}
     <style>
+	table {
+    border-top: 1px solid;
+    border-collapse: collapse;
+	margin:auto;
+	text-align:center;
+  }
+  tr, td {
+    border-bottom: 1px solid;
+    padding: 10px;
+  }
+
+  .cancel{
+  background-color: #555555; color: gray;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: gray;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.cancel:hover{background-color: gray}
+
+.cancel:active{
+  background-color: black;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.join{
+background-color: #555555; color: gray;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: gray;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.join:hover{background-color: gray}
+
+.join:active{
+  background-color: black;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button{background-color: #555555; color:white;}
+
     </style>
 </head>
 <body>
     @using (Html.BeginForm("Join", "Home"))
     {
-        <h2>회원가입</h2>
-        <table border="1">
+	<center>
+        <h2>Sign Up</h2>
+		<hr>
+        <table border="1" width = 350px height = 300px align = "center" style="word-wrap:break-word; word-break:break-all;">
             <tr>
                 <td>
                     ID
                 </td>
                 <td>
                     @Html.TextBoxFor(x => x.theID, new { style = "width:150px;" })
-                    <input type="button" value="중복 검사" onclick="id_check()" />
+                    <input type="button" value="중복 검사" id="button" class="button" onclick="id_check()" />
 
                 </td>
             </tr>
@@ -66,10 +129,10 @@
 
                 </td>
             </tr>
-        </table>
-        <input type="reset" value="취소" />
-        <input type="submit" value="회원가입">
-
+        </table><br>
+        <input type="reset" value="취소" id="cancel" class="cancel"/>
+        <input type="submit" value="회원가입" id="join" class="join">
+		</center>
 
     }
 
