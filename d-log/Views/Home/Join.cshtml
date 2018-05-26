@@ -1,20 +1,67 @@
-﻿
-@{
-    ViewBag.Title = "Join";
-}
+﻿@model d_log.Models.Cuser
+
 
 <<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Join</title>
+    <title>Login</title>
 </head>
 <body>
+    @using (Html.BeginForm("Join", "Home"))
+    {
+        <table border="1">
+            <tr>
+                <td>
+                    ID
+                </td>
+                <td>
+                    @Html.TextBoxFor(x => x.theID, new { style = "width:150px;" })
 
-    <h1>This is a Heading</h1>
-    <p>This is a paragraph.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    PW
+                </td>
+                <td>
+                    @Html.TextBoxFor(x => x.thePW, new { style = "width:150px;", @type = "password" })
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    PW재확인
+                </td>
+                <td>
+                    @Html.TextBoxFor(x => x.thePW, new { style = "width:150px;", @type = "password" })
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    NAME
+                </td>
+                <td>
+                    @Html.TextBoxFor(x => x.theName, new { style = "width:150px;" })
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    E-Mail
+                </td>
+                <td>
+                    @Html.TextBoxFor(x => x.theEmail, new { style = "width:150px;" })
+
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Login">
+
+
+    }
+
 
 </body>
 </html>
-
-

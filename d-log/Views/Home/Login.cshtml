@@ -10,9 +10,35 @@
     <title>Login</title>
 </head>
 <body>
+    @using (Html.BeginForm("Login", "Home"))
+    {
+        <table border="1">
+    <tr>
+        <td>
+            ID
+        </td>
+        <td>
+            <input type="text" name="id">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            PW
+        </td>
+        <td>
+            <input type="password" name="pw">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <input type="submit" value="Login">
+        </td>
 
-    <h1>This is a Heading</h1>
-    <p>This is a paragraph.</p>
+    </tr>
+</table>
+       
+    }
+
 
 </body>
 </html>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using d_log.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,7 @@ namespace d_log
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
+            CInstance.Initalize();
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
