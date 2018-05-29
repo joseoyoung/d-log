@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Login";
 }
 
@@ -9,102 +8,116 @@
     <meta charset="UTF-8">
     <title>Login</title>
 
-	<style>
-	table {
-    border-top: 1px solid;
-    border-collapse: collapse;
-	margin:auto;
-	text-align:center;
-  }
-  tr, td {
-    border-bottom: 1px solid;
-    padding: 10px;
-  }
+    <style>
+        .basic {
+            border-width: 1px;
+            border-style: solid;
+            border-top-color: #dfdfdf;
+            border-bottom-color: #dfdfdf;
+            border-right-color: #dfdfdf;
+            border-left-color: #dfdfdf;
+        }
 
-  .cancel{
-  background-color: #555555; color: gray;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 14px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: gray;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
+        input.b_style {
+            background-color: black;
+            width: 70px;
+            height: 30px;
+            color: white;
+            border: none;
+            text-align: center;
+            display: inline-block;
+            font-size: 17px;
+        }
 
-.cancel:hover{background-color: gray}
+        input.t_style {
+            border: none;
+            text-decoration: none;
+            color: #919191;
+            font-family: 'Noto Sans CJK KR';
+            font-size: 15pt;
+        }
 
-.cancel:active{
-  background-color: black;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
+            input.t_style:focus {
+                border: none;
+                text-decoration: none;
+                color: #919191;
+                font-family: 'Noto Sans CJK KR';
+                font-size: 15pt;
+            }
 
-.login{
-background-color: #555555; color: gray;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 14px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: gray;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
+        table {
+            text-decoration: none;
+            color: #919191;
+            font-family: 'Noto Sans CJK KR';
+            font-size: 15pt;
+        }
 
-.login:hover{background-color: gray}
+        .n_border {
+            border-color: white;
+            text-decoration: none;
+        }
+        /*
+        a:link {
+            text-decoration: none;
+            color: #919191;
+            font-family: 'Noto Sans CJK KR';
+            font-size: 9pt;
+        }
 
-.login:active{
-  background-color: black;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-	</style>
+        a:visited {
+            text-decoration: none;
+            color: #919191;
+            font-family: 'Noto Sans CJK KR';
+            font-size: 9pt;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #919191;
+            font-family: 'Noto Sans CJK KR';
+            font-size: 9pt;
+        }
+
+        a:active {
+            text-decoration: underline;
+            color: #919191;
+            font-family: 'Noto Sans CJK KR';
+            font-size: 9pt;
+        }*/
+
+    </style>
 </head>
 <body>
     @using (Html.BeginForm("Login", "Home"))
     {
-	<center>
-        <h2>Login</h2>
-		<hr>
-        <table border="1" width = 350px height = 100px align = "center" style="word-wrap:break-word; word-break:break-all;">
-    <tr>
-        <td>
-            ID
-        </td>
-        <td>
-            <input type="text" name="id">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            PW
-        </td>
-        <td>
-            <input type="password" name="pw">
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2" align="center">
-            <input type="reset" id="cancel" class="cancel" value="취소"/>
-            <input type="submit" id="login" class="login" value="로그인">
-        </td>
+        <center>
+            <h2>Login</h2>
+            <hr>
+            <table border="1" width="300" height="100" align="center" class="basic" style="margin-bottom:10px;">
+                <tr>
+                    <td>
+                        &nbsp;ID&nbsp;
+                    </td>
+                    <td class="basic">
+                        <input type="text" name="id" class="t_style" size="20">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="basic">
+                        &nbsp;PW&nbsp;
+                    </td>
+                    <td>
+                        <input type="password" name="pw" class="t_style" size="20">
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" id="login" class="b_style" value="로그인">
+            <input type="reset" id="cancel" class="b_style" value="취소">
+        </center>
 
-    </tr>
-</table>
-</center>
-       
     }
 
+    <br />
 
 </body>
 </html>
