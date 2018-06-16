@@ -13,67 +13,54 @@
         }
     </script>}
     <style>
-	table {
-    border-top: 1px solid;
-    border-collapse: collapse;
-	margin:auto;
-	text-align:center;
-  }
-  tr, td {
-    border-bottom: 1px solid;
-    padding: 10px;
-  }
+        .basic {
+            border-width: 1px;
+            border-style: solid;
+            border-top-color: #dfdfdf;
+            border-bottom-color: #dfdfdf;
+            border-right-color: #dfdfdf;
+            border-left-color: #dfdfdf;
+            text-align:center;
+        }
 
-  .cancel{
-  background-color: #555555; color: gray;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 14px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: gray;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
+        input.b_style {
+            background-color: black;
+            width: 80px;
+            height: 30px;
+            color: white;
+            border: none;
+            text-align: center;
+            display: inline-block;
+            font-size: 17px;
+        }
 
-.cancel:hover{background-color: gray}
+        input.t_style {
+            border: none;
+            text-decoration: none;
+            color: #919191;
+            font-family: 'Noto Sans CJK KR';
+            font-size: 15pt;
+        }
 
-.cancel:active{
-  background-color: black;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
+        input.t_style:focus {
+                border: none;
+                text-decoration: none;
+                color: #919191;
+                font-family: 'Noto Sans CJK KR';
+                font-size: 15pt;
+            }
 
-.join{
-background-color: #555555; color: gray;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 14px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: gray;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
+        table {
+            text-decoration: none;
+            color: #919191;
+            font-family: 'Noto Sans CJK KR';
+            font-size: 15pt;
+        }
 
-.join:hover{background-color: gray}
-
-.join:active{
-  background-color: black;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
-.button{background-color: #555555; color:white;}
-
+        .n_border {
+            border-color: white;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -82,19 +69,19 @@ background-color: #555555; color: gray;
 	<center>
         <h2>Sign Up</h2>
 		<hr>
-        <table border="1" width = 350px height = 300px align = "center" style="word-wrap:break-word; word-break:break-all;">
+        <table border="1" class="basic" width = 350px height = 300px align = "center" style="word-wrap:break-word; word-break:break-all;">
             <tr>
-                <td>
+                <td class="basic">
                     ID
                 </td>
                 <td>
                     @Html.TextBoxFor(x => x.theID, new { style = "width:150px;" })
-                    <input type="button" value="중복 검사" id="button" class="button" onclick="id_check()" />
+                    <input type="button" value="중복 검사" id="button" class="b_style" onclick="id_check()" />
 
                 </td>
             </tr>
             <tr>
-                <td>
+                <td class="basic">
                     PW
                 </td>
                 <td>
@@ -103,7 +90,7 @@ background-color: #555555; color: gray;
                 </td>
             </tr>
             <tr>
-                <td>
+                <td class="basic">
                     PW재확인
                 </td>
                 <td>
@@ -112,7 +99,7 @@ background-color: #555555; color: gray;
                 </td>
             </tr>
             <tr>
-                <td>
+                <td class="basic">
                     NAME
                 </td>
                 <td>
@@ -121,7 +108,7 @@ background-color: #555555; color: gray;
                 </td>
             </tr>
             <tr>
-                <td>
+                <td class="basic">
                     E-Mail
                 </td>
                 <td>
@@ -130,8 +117,8 @@ background-color: #555555; color: gray;
                 </td>
             </tr>
         </table><br>
-        <input type="reset" value="취소" id="cancel" class="cancel"/>
-        <input type="submit" value="회원가입" id="join" class="join">
+        <input type="reset" value="취소" id="cancel" class="b_style"/>
+        <input type="submit" value="회원가입" id="join" class="b_style">
 		</center>
 
     }

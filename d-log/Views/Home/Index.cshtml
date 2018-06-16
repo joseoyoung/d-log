@@ -3,7 +3,6 @@
     ViewBag.Title = "Index";
 }
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,31 +16,37 @@
 
     <h2>D-log</h2>
     <p>
-        <br />
         <!--
-        <div id="wrapper">
-            <div>
-                <div class="sliderbutton"><img src="images/left.gif" width="32" height="38" alt="Previous" onclick="slideshow.move(-1)" /></div>
-                <div id="slider">
-                    <ul>
-                        <li><img src="photos/sea-turtle.jpg" width="500" height="300" alt="Sea turtle" /></li>
-                        <li><img src="photos/sea-turtle.jpg" width="500" height="300" alt="Sea turtle" /></li>
-                        <li><img src="photos/coral-reef.jpg" width="500" height="300" alt="Coral Reef" /></li>
-                        <li><img src="photos/blue-fish.jpg" width="500" height="300" alt="Blue Fish" /></li>
-                    </ul>
-                </div>
-                <div class="sliderbutton"><img src="images/right.gif" width="32" height="38" alt="Next" onclick="slideshow.move(1)" /></div>
+    <div id="wrapper">
+        <div>
+            <div class="sliderbutton"><img src="images/left.gif" width="32" height="38" alt="Previous" onclick="slideshow.move(-1)" /></div>
+            <div id="slider">
+                <ul>
+                    <li><img src="photos/sea-turtle.jpg" width="500" height="300" alt="Sea turtle" /></li>
+                    <li><img src="photos/sea-turtle.jpg" width="500" height="300" alt="Sea turtle" /></li>
+                    <li><img src="photos/coral-reef.jpg" width="500" height="300" alt="Coral Reef" /></li>
+                    <li><img src="photos/blue-fish.jpg" width="500" height="300" alt="Blue Fish" /></li>
+                </ul>
             </div>
-            <ul id="pagination" class="pagination">
-                <li onclick="slideshow.pos(0)">1</li>
-                <li onclick="slideshow.pos(1)">2</li>
-                <li onclick="slideshow.pos(2)">3</li>
-                <li onclick="slideshow.pos(3)">4</li>
-            </ul>
+            <div class="sliderbutton"><img src="images/right.gif" width="32" height="38" alt="Next" onclick="slideshow.move(1)" /></div>
         </div>
-            -->
-        <br />
-        - D-log는 'Diary'와 'Blog'를 합친 말로서 다이어리와 블로그의 특징 두 가지를 합친 저희 웹사이트의 이름입니다.<br />
+        <ul id="pagination" class="pagination">
+            <li onclick="slideshow.pos(0)">1</li>
+            <li onclick="slideshow.pos(1)">2</li>
+            <li onclick="slideshow.pos(2)">3</li>
+            <li onclick="slideshow.pos(3)">4</li>
+        </ul>
+    </div>
+        -->
+        <center>
+            <img src="../Content/index.png" height="70%" width="70%" />
+            <br />
+            <b>
+                D-log는 'Diary'와 'Blog'를 합친 말로서 다이어리와 블로그의 특징 두 가지를 합친 저희 웹사이트의 이름입니다.
+            </b>
+        </center>
+        <br /><br />
+        <hr style="border:0px; height:2px; background-color: gray;" />
         <br /><br />
         1. 소개<br />
         - 다이어리와 블로그 형식의 결합으로 각자 로그인 하여 그 당일에 있었던 수업 내용을 적어 공유하여 보는 형식으로 되어있습니다.<br />
@@ -51,18 +56,9 @@
         - 반 친구들이 각자의 블로그를 활용하여 학교 수업 내용을 정리하고, 그것을 공유하는 것을 기반하여 제작하였습니다.<br />
         - 타 블로그 사이트는 다이어리와 따로 정리해야 하지만 블로그를 사용함과 함께 일정을 정리할 수 있는 기능을 포함하고 있습니다.
         <br /><br />
+
+
     </p>
-    <script type="text/javascript">
-    var slideshow = new TINY.slider.slide('slideshow', {
-        id: 'slider',
-        auto: 3,
-        resume: true,
-        vertical: false,
-        navid: 'pagination',
-        activeclass: 'current',
-        position: 0
-    });
-    </script>
 </body>
 </html>
 
