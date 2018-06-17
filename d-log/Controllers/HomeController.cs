@@ -22,6 +22,10 @@ namespace d_log.Controllers
         {
             return View();
         }
+        public ActionResult Calendar()
+        {
+            return View();
+        }
         [HttpPost]
         public ActionResult Login(Cuser cuser)
         {
